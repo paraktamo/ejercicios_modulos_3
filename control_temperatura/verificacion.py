@@ -7,10 +7,20 @@ es segura o peligrosa.
 
 """
 
-def es_temperatura_segura(temp):
+def es_temperatura_segura(temp: int) -> bool:
+    """
+    Recibe la temperatura como parametro y retorna una comparacion,
+    es decir, un booleano.
+    Es una instancia de verificacion si la temperatura esta entre los
+    parametros de valores de seguridad o no.
+    """
     return -20 <= temp <= 5
     
-def mostrar_estado(segura):
+def mostrar_estado(segura: bool):
+    """
+    Recibe un booleano como parametro, no retorna nada.
+    Informa si la temperatura es segura o peligrosa.
+    """
     if segura:
         print("La temperatura es segura.")
     else:

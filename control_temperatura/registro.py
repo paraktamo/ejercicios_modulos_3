@@ -12,12 +12,21 @@ ingresada con un mensaje apropiado.
 """
 
 
-def mostrar_temperatura(temp):
+def mostrar_temperatura(temp: int) -> int:
+    """
+    Recibe como param la temperatura ingresada y devuelve la misma.
+    Se encarga de informar la temperatura que se ingresó.
+    """
     print(f"La temperatura ingresada es: {temp}℃")
     return temp
 
 
-def pedir_temperatura():
+def pedir_temperatura()-> int:
+    """
+    Es llamada incialmente en main.py, no recibe param, retorna la temperatura.
+    Es una instancia de verificacion si la temperatura esta entre los valores
+    aceptados.
+    """
     temperature = int(input("Ingrese una temperatura (entre -100 y 100): "))
 
     if temperature > 100 or temperature < -100:
